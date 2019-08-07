@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Simple To Do List to learn Express and Templating",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas-le-moullec/toDoExpress.git"
+  },
+  "author": "Thomas LE MOULLEC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomas-le-moullec/toDoExpress/issues"
+  },
+  "homepage": "https://github.com/thomas-le-moullec/toDoExpress#readme"
+}
