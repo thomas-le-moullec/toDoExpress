@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Ma To Do List</h2>
+        <% if (locals.toDo) { %>
+        <ul>
+            <%for (var result in toDo){%>
+                <li><%=result%>:<%=toDo[result]%></li>    
+            <%}%>
+        </ul>
+        <% } %>
+        <form method="POST" action="/submit-action">
+            <input type="text" name="action" />
+            <input type="submit" />
+        </form>
+
+    </body> 
+</html>
