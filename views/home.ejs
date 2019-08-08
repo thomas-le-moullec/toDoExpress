@@ -5,7 +5,7 @@
         <% if (locals.toDo) { %>
         <ul>
             <%for (var result in toDo){%>
-                <li><%=result%>:<%=toDo[result]%></li>    
+                <li><a href="/remove-action/<%= result %>">✘</a><%=result%>:<%=toDo[result]%></li>
             <%}%>
         </ul>
         <% } %>
@@ -13,6 +13,5 @@
             <input type="text" name="action" />
             <input type="submit" />
         </form>
-
     </body> 
 </html>

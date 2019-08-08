@@ -28,13 +28,25 @@ app.post('/submit-action', urlencodedParser, (req, res) => {
     else {
         req.session.actionsToDo.push(actionToDo);
     }
-    res.render('home.ejs', {toDo: req.session.actionsToDo})
-    res.end()
+    res.redirect('/');
+});
+
+app.get('/remove-action/:id', urlencodedParser, (req, res) => {
+    console.log("Remove Action accessed!");
+    if (req.params.id) {
+        const actionToRemove = req.params.id;
+        req.session.actionsToDo.splice(actionToRemove, 1);
+    }
+    res.redirect('/');
 });
 
 app.get('/logout', (req,res) => {
     req.session = null;
     console.log("Cookies cleaned!");
+    res.redirect('/');
+});
+
+app.use((req, res) => {
     res.redirect('/');
 });
 
